@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>{
-        List<User> findByNameContaining(String nameFragment);
+public interface UserRepository extends JpaRepository<User, Integer>{
+//        List<User> findByNameContaining(String nameFragment);
 
     Optional<User> findByName(String username);
 }
