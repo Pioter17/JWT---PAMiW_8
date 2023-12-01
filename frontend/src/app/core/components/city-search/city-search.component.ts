@@ -33,7 +33,7 @@ export class CitySearchComponent implements OnInit{
   onEnter(event: Event): void {
     if (event instanceof KeyboardEvent) {
       if (event.key === 'Enter' && this.control.value) {
-        this.api.getAutoCompleteLocations(this.control.value).subscribe((res) => {
+        this.api.getAutoCompleteLocations(this.control.value).subscribe((res: City[]) => {
           this.cities = res;
           // Emituj nową wartość do options$
           this.optionsSubject.next(this.cities);
