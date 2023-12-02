@@ -11,7 +11,6 @@ import { LoginComponent } from './login.component';
     CommonModule,
     LoginRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
     MatFormFieldModule
   ],
   declarations: [

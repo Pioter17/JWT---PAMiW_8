@@ -20,7 +20,6 @@ export class RegisterComponent implements OnInit {
     private fb: FormBuilder,
     private authService: AuthService,
     private userService: UserService,
-    private localStorage: LocalStorageService
   ) { }
 
   ngOnInit() {
@@ -35,6 +34,7 @@ export class RegisterComponent implements OnInit {
     let token: Observable<AuthenticationResponse> = this.authService.register(user);
     token.subscribe((res)=>{
       this.userService.setUserToken(res.token);
+      console.log(res.token);
     });
   }
 

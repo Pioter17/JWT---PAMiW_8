@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
   login(){
     let user: AuthenticationUserLoginData = this.form.value;
     this.authService.login(user).subscribe(()=>{
-      console.log("zalogowano");
     });
+    
   }
 
 }
