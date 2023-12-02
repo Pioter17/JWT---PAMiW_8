@@ -1,3 +1,3 @@
 export enum KeyStorage {
-  USER_AUTHENTICATION_TOKEN = "guess_who_user_authentication_token"
+  USER_AUTHENTICATION_TOKEN = "some_token"
 }

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AccuweatherInterceptor } from './core/interceptors/accuweather.interceptor';
 import { ApiWeatherService } from './core/services/api-weather-service.service';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -12,7 +14,10 @@ import { ApiWeatherService } from './core/services/api-weather-service.service';
     AppComponent,
   ],
   imports: [
-    RouterModule
+    RouterModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [
     {

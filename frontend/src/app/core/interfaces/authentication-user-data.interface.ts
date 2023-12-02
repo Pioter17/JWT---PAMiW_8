@@ -2,7 +2,7 @@ export interface AuthenticationUserRegisterData {
   user: {
     username: string,
     password: string,
-    password_confirmation: string,
+    // password_confirmation: string,
   }
 }
 

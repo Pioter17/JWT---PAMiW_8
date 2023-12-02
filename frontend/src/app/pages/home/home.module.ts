@@ -24,23 +24,23 @@ import { DisplayMoviesComponent } from 'src/app/core/components/display-movies/d
 import { DisplayWeatherComponent } from 'src/app/core/components/display-weather/display-weather.component';
 import { MyInfoComponent } from 'src/app/shared/UI/my-info/my-info.component';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
     MatSelectModule,
     MatAutocompleteModule,
-    BrowserAnimationsModule,
     MatDialogModule,
     FormsModule,
     MatPaginatorModule,
     MatTableModule,
+    HomeRoutingModule
   ],
   declarations: [
     HomeComponent,
