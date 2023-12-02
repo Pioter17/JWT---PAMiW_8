@@ -1,13 +1,13 @@
 import { RoutesPath } from '../enums/routes-path.enum';
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthorizationGuardGuard implements CanActivate, CanLoad {
+export class AuthorizationGuardGuard  {
 
   constructor(
     private router: Router,
