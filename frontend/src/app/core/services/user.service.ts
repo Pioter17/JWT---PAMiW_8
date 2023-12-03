@@ -45,6 +45,6 @@ export class UserService {
 
   private clearAll(): void {
     this.localStorageService.clear();
-    void this.router.navigateByUrl('auth');
+    void this.router.navigateByUrl('auth/login');
   }
 }

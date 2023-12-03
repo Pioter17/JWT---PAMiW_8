@@ -1,5 +1,5 @@
-import { RoutesPath } from '../enums/routes-path.enum';
 import { Injectable } from '@angular/core';
+import { RoutesPath } from '../enums/routes-path.enum';
 import { ActivatedRouteSnapshot, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { Observable } from 'rxjs';
@@ -25,7 +25,10 @@ export class AuthorizationGuardGuard  {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (this.userService.isAuthenticated())
       return true;
-    return this.router.createUrlTree([RoutesPath.AUTH]);
+    else {
+      console.log("canactivate router");
+      return this.router.createUrlTree([RoutesPath.AUTH]);
+    }
   }
 
 }

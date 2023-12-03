@@ -47,15 +47,15 @@ export class HomeComponent implements OnInit {
   }
 
   handleLogout() {
-    if (!this.userService.isAuthenticated)
-      return;
-    this.authService.logout().pipe(
-      filter((res) => res),
-      takeUntil(this.onDestroy$),
-    ).subscribe(() => {
-      this.userService.logout();
+    // if (!this.userService.isAuthenticated)
+    //   return;
+    // this.authService.logout().pipe(
+    //   filter((res) => res),
+    //   takeUntil(this.onDestroy$),
+    // ).subscribe(() => {
+      // this.userService.logout();
       this.router.navigateByUrl(RoutesPath.AUTH);
-    })
+  //   })
   }
 
 }

@@ -5,13 +5,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
     CommonModule,
     LoginRoutingModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   declarations: [
     LoginComponent

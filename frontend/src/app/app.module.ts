@@ -7,6 +7,7 @@ import { AccuweatherInterceptor } from './core/interceptors/accuweather.intercep
 import { ApiWeatherService } from './core/services/api-weather-service.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 
 @NgModule({

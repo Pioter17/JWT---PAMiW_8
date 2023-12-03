@@ -56,6 +56,12 @@ import { HomeRoutingModule } from './home-routing.module';
   ],
   providers: [
     AuthService,
+    
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
   ]
 })
 export class HomeModule { }

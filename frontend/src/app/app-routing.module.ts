@@ -13,16 +13,16 @@ const routes: Routes = [
     path: RoutesPath.AUTH,
     loadChildren: () => import('../app/pages/auth/auth.module').then(m => m.AuthModule),
   },  
-  // {
-  //   path: '',
-  //   redirectTo: `${RoutesPath.HOME}/${RoutesPath.DASHBOARD}`,
-  //   pathMatch: 'full'
-  // },
-  // {
-  //   path: '**',
-  //   redirectTo: `${RoutesPath.HOME}/${RoutesPath.DASHBOARD}`,
-  //   pathMatch: 'full'
-  // },
+  {
+    path: '',
+    redirectTo: `${RoutesPath.AUTH}/${RoutesPath.LOGIN}`,
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: `${RoutesPath.AUTH}/${RoutesPath.LOGIN}`,
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
