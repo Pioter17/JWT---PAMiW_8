@@ -44,7 +44,9 @@ export class UserService {
   // }
 
   private clearAll(): void {
+    console.log("przed");
     this.localStorageService.clear();
+    console.log("pomiędzy");
     void this.router.navigateByUrl('auth/login');
   }
 }

@@ -8,6 +8,7 @@ import { ApiWeatherService } from './core/services/api-weather-service.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { AuthService } from './core/services/auth.service';
 
 
 @NgModule({
@@ -26,7 +27,13 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
       useClass: AccuweatherInterceptor,
       multi: true
     },
-    ApiWeatherService
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    ApiWeatherService,
+    AuthService,
   ],
   bootstrap: [AppComponent]
 })

@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   logout(): Observable<boolean> {
-    return this.http.delete<unknown>(`${PATHS.API_MOVIES_BASE_PATH}${Api.LOGOUT}`, {}).pipe(
+    return this.http.post<unknown>(`${PATHS.API_MOVIES_BASE_PATH}${Api.LOGOUT}`, {}).pipe(
       map(() => true),
       catchError(() => of(false)),
     )

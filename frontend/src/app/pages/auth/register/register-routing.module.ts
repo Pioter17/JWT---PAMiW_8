@@ -3,8 +3,9 @@ import { RegisterComponent } from "./register.component";
 import { NgModule } from "@angular/core";
 
 const routes : Routes = [
-  {path: '',
-  component: RegisterComponent
+  {
+    path: '',
+    component: RegisterComponent
   }
 ];
 

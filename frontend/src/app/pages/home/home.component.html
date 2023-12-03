@@ -1,11 +1,12 @@
 <app-my-info [title]="env.configurationName" lineColor="yellowgreen"></app-my-info>
-<button
+<!-- <button
     mat-raised-button
     color="primary"
     (click)="handleLogout()"
 >
     Wyloguj
-</button>
+</button> -->
+<a (click)="handleLogout()" routerLink="">logout</a>
 <app-city-search></app-city-search>
 <app-display-movies></app-display-movies>
 <app-display-directors></app-display-directors>

@@ -28,6 +28,7 @@ export class LocalStorageService {
   }
 
   public clear(): void {
+    console.log("locoal storage clear")
     window.localStorage.clear();
   }
 

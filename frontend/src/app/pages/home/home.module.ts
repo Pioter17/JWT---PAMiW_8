@@ -25,6 +25,8 @@ import { DisplayWeatherComponent } from 'src/app/core/components/display-weather
 import { MyInfoComponent } from 'src/app/shared/UI/my-info/my-info.component';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { HomeRoutingModule } from './home-routing.module';
+import { RouterModule } from '@angular/router';
+import { UserService } from 'src/app/core/services/user.service';
 
 @NgModule({
   imports: [
@@ -40,7 +42,8 @@ import { HomeRoutingModule } from './home-routing.module';
     FormsModule,
     MatPaginatorModule,
     MatTableModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    RouterModule
   ],
   declarations: [
     HomeComponent,
@@ -56,7 +59,7 @@ import { HomeRoutingModule } from './home-routing.module';
   ],
   providers: [
     AuthService,
-    
+    UserService,    
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

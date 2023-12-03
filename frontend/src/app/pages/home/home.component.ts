@@ -7,6 +7,7 @@ import { BgcolorManagerService } from 'src/app/core/services/bgcolor-manager.ser
 import { UserService } from 'src/app/core/services/user.service';
 import { environment } from 'src/environments/environment';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,6 +18,8 @@ export class HomeComponent implements OnInit {
   title = 'WeatherForecast';
   backgroundColor: string;
   env = environment;
+
+  authRoute: `/${RoutesPath.AUTH}/${RoutesPath.LOGIN}`;
 
   configName: string;
   apiUrl: string;
@@ -53,8 +56,10 @@ export class HomeComponent implements OnInit {
     //   filter((res) => res),
     //   takeUntil(this.onDestroy$),
     // ).subscribe(() => {
-      // this.userService.logout();
-      this.router.navigateByUrl(RoutesPath.AUTH);
+      this.userService.logout();
+      console.log("logout");
+      window.location.reload()
+      // this.router.navigateByUrl("auth");
   //   })
   }
 
