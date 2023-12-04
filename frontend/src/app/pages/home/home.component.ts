@@ -58,8 +58,8 @@ export class HomeComponent implements OnInit {
     // ).subscribe(() => {
       this.userService.logout();
       console.log("logout");
+      this.router.navigateByUrl("auth");
       window.location.reload()
-      // this.router.navigateByUrl("auth");
   //   })
   }
 
